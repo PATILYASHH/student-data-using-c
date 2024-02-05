@@ -72,31 +72,34 @@ void addstudent()
     printf("\nEnter marks of student: ");
     scanf("%f", &studentdata[noofstudent].marks);
 
-    printf("Enter Roll no of student: ");
+    printf("\nEnter Roll no of student: ");
     scanf("%d", &studentdata[noofstudent].rollno);
 
     noofstudent++;
 
-    printf("Student data is added...\n\n");
+    printf("\n\nStudent added succesfully\n\n");
+  printf("________________________________\n\n\n\n ");
+
 }
 
 void getstudent()
 {
-    printf("\n\v\v ****Student Information**** \n\v\v");
     int i = 0;
     int rn;
 
-    printf("\nEnter Roll No of student: \n");
+    printf("\nEnter Roll No of student:");
     scanf("%d", &rn);
 
     for (i = 0; i < noofstudent; i++)
     {
         if (studentdata[i].rollno == rn)
         {
+          
+    printf("\n\v\v **** Student Information **** \n\v");
             printf("NAME : %s\n", studentdata[i].name);
             printf("ROLL  NO : %d\n", studentdata[i].rollno);
             printf("Marks : %f\n", studentdata[i].marks);
-
+printf("________________________________");
           printf("\n\n\n\n");
             return;
         }
