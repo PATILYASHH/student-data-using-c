@@ -19,7 +19,7 @@ int main()
 
     do
     {
-        printf("Total students data we have: %d / 100\n", noofstudent);
+        printf("\nTotal students data we have: %d / 100\n", noofstudent);
         printf("1] Add student data\n");
         printf("2] Get student data\n");
         printf("3] Calculate average marks\n");
@@ -45,10 +45,14 @@ int main()
         case 4:
             // Exit
             printf("Exiting the program.\n");
+            printf("____________________________");
             break;
 
         default:
-            printf("No such option, Try again...\n");
+        printf("\n.........................................");
+            printf("\nNo such option, Try again...\n");
+            printf(".........................................\n");
+            printf("_________________________________");
             break;
         }
     } while (choice != 4);
@@ -58,11 +62,15 @@ int main()
 
 void addstudent()
 {
+            printf("\n____________________________________\n");
     printf("\n\n*** Add New Student Information ***\n\n");
 
     if (noofstudent >= 100)
     {
+    printf("\n.........................................");
         printf("Your Limit is over\n");
+        printf(".........................................\n");
+        printf("______________________________");
         return;
     }
 
@@ -77,13 +85,16 @@ void addstudent()
 
     noofstudent++;
 
+printf("\n.........................................");
     printf("\n\nStudent added succesfully\n\n");
+printf(".........................................\n");
   printf("________________________________\n\n\n\n ");
 
 }
 
 void getstudent()
 {
+            printf("\n_____________________________________\n");
     int i = 0;
     int rn;
 
@@ -94,7 +105,7 @@ void getstudent()
     {
         if (studentdata[i].rollno == rn)
         {
-          
+
     printf("\n\v\v **** Student Information **** \n\v");
             printf("NAME : %s\n", studentdata[i].name);
             printf("ROLL  NO : %d\n", studentdata[i].rollno);
@@ -104,6 +115,8 @@ printf("________________________________");
             return;
         }
     }
-
-    printf("Student not found. Try again\n");
+printf("\n.........................................");
+    printf("\n\nStudent not found. Try again\n\n\n");
+    printf(".........................................\n");
+    printf("__________________________________");
 }
