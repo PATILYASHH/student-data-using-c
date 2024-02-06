@@ -50,7 +50,7 @@ int main()
 
         default:
         printf("\n.........................................");
-            printf("\nNo such option, Try again...\n");
+            printf("\nNo such option, Try again \a...\n");
             printf(".........................................\n");
             printf("_________________________________");
             break;
@@ -68,7 +68,7 @@ void addstudent()
     if (noofstudent >= 100)
     {
     printf("\n.........................................");
-        printf("Your Limit is over\n");
+        printf("Your Limit is over \a\n");
         printf(".........................................\n");
         printf("______________________________");
         return;
@@ -84,9 +84,9 @@ void addstudent()
     scanf("%d", &studentdata[noofstudent].rollno);
 
     noofstudent++;
-
+    
 printf("\n.........................................");
-    printf("\n\nStudent added succesfully\n\n");
+    printf("\n\nStudent added succesfully\a\n\n");
 printf(".........................................\n");
   printf("________________________________\n\n\n\n ");
 
@@ -105,7 +105,7 @@ void getstudent()
     {
         if (studentdata[i].rollno == rn)
         {
-
+          
     printf("\n\v\v **** Student Information **** \n\v");
             printf("NAME : %s\n", studentdata[i].name);
             printf("ROLL  NO : %d\n", studentdata[i].rollno);
@@ -116,7 +116,8 @@ printf("________________________________");
         }
     }
 printf("\n.........................................");
-    printf("\n\nStudent not found. Try again\n\n\n");
+    printf("\n\nStudent not found. Try again \a\n\n\n");
     printf(".........................................\n");
     printf("__________________________________");
 }
+    
